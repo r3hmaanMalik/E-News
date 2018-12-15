@@ -60,7 +60,7 @@ router.get('/', function (req, res) {
                                              error: err
                                          });
                                      }
-                                     return res.render('index',{ trendings:latests,sport:sportss,entertainment:entertainments,education:student,business:businesss,world:worlds,category:"latest",randomImage:"lahore"});
+                                     return res.render('index',{ trendings:latests,sport:sportss,entertainment:entertainments,education:student,business:businesss,world:worlds,category:"latest",randomImage:"chocolates"});
 
                                  });
                              });

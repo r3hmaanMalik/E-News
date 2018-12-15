@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 const cron = require("node-cron");
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cars = require('./routes/carRoutes');
@@ -31,8 +32,8 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 cron.schedule("* * * * *", function() {
-      console.log("running a task every minute");
-    });
+  console.log("running a task every minute");
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +41,9 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -48,17 +51,17 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cars', cars);
 app.use('/news', news);
-app.use('/sports',sports)
-app.use('/sports_detail',sports_detail)
-app.use('/latest',latest)
-app.use('/entertainment',entertainment)
+app.use('/sports', sports)
+app.use('/sports_detail', sports_detail)
+app.use('/latest', latest)
+app.use('/entertainment', entertainment)
 
-app.use('/entdetail',ent_detail)
-app.use('/latdetail',lat_detail)
+app.use('/entdetail', ent_detail)
+app.use('/latdetail', lat_detail)
 
-app.use('/studentcorner',student)
-app.use('/Business',business)
-app.use('/World',world)
+app.use('/studentcorner', student)
+app.use('/Business', business)
+app.use('/World', world)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

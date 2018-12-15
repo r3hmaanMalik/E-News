@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Avision</title>
+<title>E-News</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Demo project">
@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div id="demo" class="logo"><a href="/">avision</a></div>
+						<div id="demo" class="logo"><a href="/">E-News</a></div>
 						<nav class="main_nav">
 							<ul>
 								<li class="active"><a href="/">Home</a></li>
@@ -41,10 +41,6 @@
 
 			</nav>
 						<div class="search_container ml-auto">
-							<div class="weather">
-								<div class="temperature">+10°</div>
-								<img class="weather_icon" src="/images/cloud.png" alt="">
-							</div>
 							<form action="#">
 								<input type="search" class="header_search_input" required="required" placeholder="Type to Search...">
 								<img class="header_search_icon" src="/images/search.png" alt="">
@@ -64,7 +60,7 @@
 
 	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">Avision</a></div>
+		<div class="logo menu_mm"><a href="#">E-News</a></div>
 		<div class="search">
 			<form action="#">
 				<input type="search" class="header_search_input menu_mm" required="required" placeholder="Type to Search...">
@@ -322,7 +318,7 @@
 																											<div class="card card_small_with_image grid-item">
 																												<img class="card-img-top" src="<%= sport[i].ilink %>" alt="">
 																												<div class="card-body">
-																													<div class="card-title card-title-small"><a href="/sports/<%= sport[i].id %>"><%= sport[i].title %></a></div>
+																													<div class="card-title card-title-small"><a href="/<%= category %>/<%= sport[i].id %>"><%= sport[i].title %></a></div>
 																													<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
 																												</div>
 																											</div>
@@ -487,7 +483,7 @@
 																											<div class="card card_largest_with_image grid-item">
 																												<img class="card-img-top" src= "<%= world[i].ilink %>" alt="https://unsplash.com/@cjtagupa">
 																												<div class="card-body">
-																													<div class="card-title"><a href="/world<%= world[i].id %>"><%= world[i].title %></a></div>
+																													<div class="card-title"><a href="/world/<%= world[i].id %>"><%= world[i].title %></a></div>
 																													<p class="card-text"><%= world[i].discription %></p>
 																													<small class="post_meta"><a href="/login">Katy Liu</a><span></small>
 																												</div>
@@ -1114,7 +1110,7 @@
 			<div class="row row-lg-eq-height">
 				<div class="col-lg-9 order-lg-1 order-2">
 					<div class="footer_content">
-						<div class="footer_logo"><a href="#">avision</a></div>
+						<div class="footer_logo"><a href="#">E-News</a></div>
 						<div class="footer_social">
 							<ul>
 								<li class="footer_social_facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
